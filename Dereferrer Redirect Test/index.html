@@ -1,0 +1,40 @@
+<title>Dereferrer Redirect</title>
+<h1>Dereferrer Redirect</h1>
+
+<p>Click the button to choose HTTP/HTTPS:</p>
+
+<p><button onclick="http()">Click HTTP/HTTPS</button></p>
+<div id="myDIV">http</div>
+
+<p></p>
+
+<p>enter website here</p>
+<p>NOTE: Do not put in http:// or https:// in the link. Choose it above</p>
+<input id="website" type=text><button onclick="redirect()">Submit</button>
+
+<script>
+
+function http() {
+  var x = document.getElementById("myDIV");
+  if (x.innerHTML === "http") {
+    x.innerHTML = "https";
+  } else {
+    x.innerHTML = "http";
+  }
+}
+
+function redirect()
+  {
+	
+	var x = document.getElementById("myDIV");
+  
+	if(x.innerHTML === ("http")){
+    var url=document.getElementById('website').value
+    window.location.href="https://dereferer.me/?http%3A//" + url
+	} 
+	else {
+	var url=document.getElementById('website').value
+    window.location.href="https://dereferer.me/?https%3A//" + url
+	}
+  }
+ </script>

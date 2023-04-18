@@ -1,0 +1,42 @@
+<title>Base64 Encode/Decode</title>
+<h1>Base64 Encode/Decode</h1>
+
+<p>Click the button to choose Encode/Decode:</p>
+
+<p><button onclick="http()">Click Encode/Decode</button></p>
+<div id="myDIV">encode</div>
+
+<br>
+
+<p>enter text here</p>
+<input id="text" type=text><button onclick="crypt()">Submit</button>
+
+<p>Results:</p>
+<div id = "textModified" ></div>
+
+<script>
+
+function http() {
+  var x = document.getElementById("myDIV");
+  if (x.innerHTML === "encode") {
+    x.innerHTML = "decode";
+  } else {
+    x.innerHTML = "encode";
+  }
+}
+
+function crypt()
+  {
+	
+	var x = document.getElementById("myDIV");
+	var y = document.getElementById("textModified")
+	if(x.innerHTML === ("encode")){
+		var text=document.getElementById('text').value
+		y.innerHTML = btoa(text)
+	} 
+	else {
+		var text=document.getElementById('text').value
+		y.innerHTML = atob(text)
+	}
+  }
+ </script>

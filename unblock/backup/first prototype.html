@@ -1,0 +1,8 @@
+<input id="test" type=text><button onclick="redirect()">Submit</button>
+<script>
+function redirect()
+  {
+    var url=document.getElementById('test').value
+    window.location.href="https://translate.google.com/translate?sl=auto&tl=en&hl=en-US&u=" + url
+  }
+  </script>
